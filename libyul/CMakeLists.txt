@@ -29,6 +29,8 @@ add_library(yul
 	FunctionReferenceResolver.h
 	Object.cpp
 	Object.h
+	ObjectCache.cpp
+	ObjectCache.h
 	ObjectParser.cpp
 	ObjectParser.h
 	Scope.cpp

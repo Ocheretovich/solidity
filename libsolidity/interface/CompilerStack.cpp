@@ -1470,7 +1470,8 @@ void CompilerStack::generateIR(ContractDefinition const& _contract)
 			m_eofVersion,
 			YulStack::Language::StrictAssembly,
 			m_optimiserSettings,
-			m_debugInfoSelection
+			m_debugInfoSelection,
+			m_objectCache
 		);
 		bool yulAnalysisSuccessful = stack.parseAndAnalyze("", _irSource);
 		solAssert(
@@ -1514,7 +1515,8 @@ void CompilerStack::generateEVMFromIR(ContractDefinition const& _contract)
 		m_eofVersion,
 		yul::YulStack::Language::StrictAssembly,
 		m_optimiserSettings,
-		m_debugInfoSelection
+		m_debugInfoSelection,
+		m_objectCache
 	);
 	bool analysisSuccessful = stack.parseAndAnalyze("", compiledContract.yulIROptimized);
 	solAssert(analysisSuccessful);
