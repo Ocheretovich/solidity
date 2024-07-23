@@ -103,7 +103,7 @@ std::string IRGenerator::generate(
 	std::map<ContractDefinition const*, std::string_view const> const& _otherYulSources
 )
 {
-	auto static notTransient = [](VariableDeclaration const* _varDeclaration) {
+	auto notTransient = [](VariableDeclaration const* _varDeclaration) {
 		solAssert(_varDeclaration);
 		return _varDeclaration->referenceLocation() != VariableDeclaration::Location::Transient;
 	};

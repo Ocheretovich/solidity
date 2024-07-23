@@ -12,7 +12,7 @@ Compiler Features:
  * EVM: Support for the EVM version "Prague".
  * SMTChecker: Add CHC engine check for underflow and overflow in unary minus operation.
  * SMTChecker: Replace CVC4 as a possible BMC backend with cvc5.
- * Standard JSON Interface: Output the storage layout of a contract when artifact ``transientStorageLayout`` is requested.
+ * Standard JSON Interface: Output the transient storage layout of a contract when artifact ``transientStorageLayout`` is requested.
  * Yul Optimizer: The optimizer now treats some previously unrecognized identical literals as identical.
 
 
